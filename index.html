@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DesignFlow | Design Review System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Design<span>Flow.</span></h2>
+    <p class="tagline">CLIENT DESIGN STUDIO</p>
+    <nav>
+      <button class="active" data-page="overview">⌂ Overview</button>
+      <button data-page="projects">▦ Project Rooms</button>
+      <button data-page="designs">✦ Design Options</button>
+      <button data-page="materials">◈ Materials</button>
+      <button data-page="gallery">▧ Gallery</button>
+      <button data-page="feedback">☏ Feedback</button>
+      <button data-page="approvals">✓ Approvals</button>
+    </nav>
+    <div class="profile">
+      <div class="avatar">DF</div>
+      <div><b>Design Studio</b><small>Workspace</small></div>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <small>WORKSPACE / DESIGN STUDIO</small>
+        <h1 id="page-title">Overview</h1>
+      </div>
+      <span class="status">● All systems ready</span>
+    </header>
+
+    <section id="overview" class="page active">
+      <div class="welcome">
+        <div>
+          <small>WELCOME TO DESIGNFLOW</small>
+          <h2>Design better. Work smarter.</h2>
+          <p>Manage your projects, explore ideas and collect client approvals.</p>
+        </div>
+        <span class="welcome-icon">✦</span>
+      </div>
+      <div class="stats">
+        <article><small>Total Projects</small><h2 id="project-count">3</h2><p>Workspace projects</p></article>
+        <article><small>Design Options</small><h2>6</h2><p>Available concepts</p></article>
+        <article><small>Pending Reviews</small><h2 id="pending-count">1</h2><p>Awaiting decisions</p></article>
+      </div>
+      <h3>Recent Projects</h3>
+      <div id="recent-projects" class="cards"></div>
+    </section>
+
+    <section id="projects" class="page">
+      <div class="section-head">
+        <p>Organise and manage your client projects.</p>
+        <button class="primary" id="add-project">+ New Project</button>
+      </div>
+      <div id="project-list" class="cards"></div>
+      <form id="project-form" class="panel hidden">
+        <h3>Create a project</h3>
+        <input id="project-name" placeholder="Project name" required>
+        <input id="client-name" placeholder="Client name" required>
+        <button class="primary">Save Project</button>
+      </form>
+    </section>
+
+    <section id="designs" class="page">
+      <p>Explore different concepts for your interior spaces.</p>
+      <div id="design-list" class="cards"></div>
+    </section>
+
+    <section id="materials" class="page">
+      <p>Explore materials and compare their properties.</p>
+      <div id="material-list" class="cards"></div>
+      <div class="panel">
+        <h3>Material Comparison</h3>
+        <p id="comparison">Select materials above to compare them.</p>
+      </div>
+    </section>
+
+    <section id="gallery" class="page">
+      <p>A collection of interior design inspirations.</p>
+      <div class="gallery">
+        <div class="gallery-item room-one"><span>Modern Living</span></div>
+        <div class="gallery-item room-two"><span>Minimal Bedroom</span></div>
+        <div class="gallery-item room-three"><span>Elegant Kitchen</span></div>
+        <div class="gallery-item room-four"><span>Creative Workspace</span></div>
+      </div>
+    </section>
+
+    <section id="feedback" class="page">
+      <p>Share your thoughts and suggestions about a project.</p>
+      <form id="feedback-form" class="panel">
+        <input id="feedback-client" placeholder="Your name" required>
+        <select id="feedback-project"></select>
+        <textarea id="feedback-message" placeholder="Write your feedback..." required></textarea>
+        <button class="primary">Submit Feedback</button>
+      </form>
+      <h3>Recent Feedback</h3>
+      <div id="feedback-list"></div>
+    </section>
+
+    <section id="approvals" class="page">
+      <p>Review design proposals and manage approval decisions.</p>
+      <div id="approval-list" class="cards"></div>
+    </section>
+
+    <footer>DesignFlow © 2026 | Interactive Design Review System</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
